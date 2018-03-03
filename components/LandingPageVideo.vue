@@ -1,58 +1,25 @@
 <template>
-  <div
-    ref="layout"
-    view="lHh Lpr fff"
-    :left-class="{'bg-grey-2': true}"
-  >
-    <div class="layout-padding logo-container non-selectable no-pointer-events logo" id="landing-page">
-      <!-- <div class="" > -->
-      <video 
-        autoplay loop muted :style="swivelPosition"
-        poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/edibars-logo-cropped.png"
-        playsinline
-        src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/bike-messenging.mp4"
-        >               
-      </video>
-      <!-- </div> -->
+  <div @mouseover="say"
+  class="layout-padding logo-container non-selectable no-pointer-events logo" 
+  id="video-container">
+    <video 
+      autoplay loop muted :style="swivelPosition"
+      poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/edibars-logo-cropped.png"
+      playsinline
+      src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/bike-messenging.mp4"
+      >               
+    </video>
 
-      <div class="layout-padding" :style="position">
+    <!-- <div class="layout-padding" :style="position">
 
-        <stoolbar class="stoolbar row no-wrap relative-position stoolbar-normal" class="brand-color"> <!--  slot="header"  -->
-          <stoolbar-title>
-            Quasar App
-            <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
-          </stoolbar-title>
-        </stoolbar>
 
-      </div>
-    </div>
-
-    
-
+    </div> -->
     
   </div>
 </template>
 
 <script>
-import {
-  dom,
-  event,
-  openURL,
-  QLayout,
-  QToolbar,
-  QToolbarTitle,
-  QBtn,
-  QIcon,
-  QList,
-  QListHeader,
-  QItem,
-  QItemSide,
-  QItemMain
-} from 'quasar'
-
 const
-  { viewport } = dom,
-  { position } = event,
   moveForce = 30,
   rotateForce = 40,
   RAD_TO_DEG = 180 / Math.PI,
@@ -70,23 +37,14 @@ function getRotationFromAccel (accelX, accelY, accelZ) {
 }
 
 export default {
-  name: 'index',
+  name: 'landingPageVideo',
   components: {
-    QLayout,
-    QToolbar,
-    QToolbarTitle,
-    QBtn,
-    QIcon,
-    QList,
-    QListHeader,
-    QItem,
-    QItemSide,
-    QItemMain
+    
   },
   data () {
     return {
-      orienting: window.DeviceOrientationEvent && !this.$q.platform.is.desktop,
-      rotating: window.DeviceMotionEvent && !this.$q.platform.is.desktop,
+      // orienting: window.DeviceOrientationEvent,
+      // rotating: window.DeviceMotionEvent,
       moveX: 0,
       moveY: 0,
       rotateY: 0,
@@ -109,17 +67,22 @@ export default {
     launch (url) {
       openURL(url)
     },
+    say () {
+      console.log("hey")
+    },
     move (evt) {
       const
-        {width, height} = viewport(),
-        {top, left} = position(evt),
+        width = document.documentElement.clientWidth,
+        height = document.documentElement.clienHeight,
+        //{top, left} = position(evt),
         halfH = height / 2,
         halfW = width / 2
+        //console.log(evt)
 
-      this.moveX = (left - halfW) / halfW * -moveForce
-      this.moveY = (top - halfH) / halfH * -moveForce
-      this.rotateY = (left / width * rotateForce * 2) - rotateForce
-      this.rotateX = -((top / height * rotateForce * 2) - rotateForce)
+      // this.moveX = (left - halfW) / halfW * -moveForce
+      // this.moveY = (top - halfH) / halfH * -moveForce
+      // this.rotateY = (left / width * rotateForce * 2) - rotateForce
+      // this.rotateX = -((top / height * rotateForce * 2) - rotateForce)
     },
     rotate (evt) {
       if (evt.rotationRate &&
@@ -183,14 +146,19 @@ export default {
 
 <style lang="scss">
 .logo-container {
-  width: 100vw;
-  height: auto;
-  perspective: 800px;
-}
-  
+  //width: 100vw;
+  //height: auto;
+  //perspective: 800px;
+}  
 .logo {
   color: mix(red, purple, 50%);
-  position: absolute;
   transform-style: preserve-3d;
+}
+#video-container {
+  flex: 3 0 90vw;
+  min-width: 480px;
+  video {
+    width: 100%;
+  }
 }
 </style>
