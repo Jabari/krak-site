@@ -1,18 +1,25 @@
 <template>
-	<section>
+	<article>
 		<div class="gif-card" :data-title="gifTitle" >
 			<video autoplay :poster="gifID" loop>
         <source :src="giphySrc(gifID)" 
         type="video/mp4" />
           {{ gifTitle }}
       </video>
+      <aside>
+      	{{ caption }}
+      </aside>
 		</div>
-	</section>
+	</article>
 </template>
 <script>
 export default {
 	name: 'GiphyCard',
 	props: {
+		caption: {
+			type: String,
+      required: false
+		},
 		gifID: {
       type: String,
       required: true
@@ -33,10 +40,12 @@ export default {
 }
 </script>
 <style lang="scss">
+$purple: #900C3F;
 .gif-card {
 	height: 60.5vh;
 	margin: 0;
 	overflow: hidden;
+	position: relative;
 
  	&:before {
     color: #fff;
@@ -87,8 +96,27 @@ export default {
   .black &:before {
   	background: black;
   }
-
- 	* {
+	aside {
+		background: white;
+		color: $purple;
+		margin: 0;
+		transform: translateX(100%);
+		transition: .5s transform;
+		width: 50%;
+		height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.75;
+		// media query for mobile
+		// 100% width for mobile
+	}
+	&:hover aside {
+		transform: translateX(0);
+	}
+ 	video {
  		margin: 0;
  		width: 100%;
  	}
