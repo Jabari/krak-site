@@ -6,8 +6,8 @@
         type="video/mp4" />
           {{ gifTitle }}
       </video>
-      <aside>
-      	{{ caption }}
+      <aside v-if="this.caption">
+      	<p>{{ caption }}</p>
       </aside>
 		</div>
 	</article>
@@ -99,19 +99,27 @@ $purple: #900C3F;
 	aside {
 		background: white;
 		color: $purple;
+		display: table;
 		margin: 0;
 		transform: translateX(100%);
 		transition: .5s transform;
-		width: 50%;
+		width: 100%;
 		height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2rem;
-    font-size: 1.5rem;
-    line-height: 1.75;
+    //padding: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 5rem;
+    text-align: center;
+    z-index: 100;
 		// media query for mobile
 		// 100% width for mobile
+		p {
+			display: table-cell;
+			vertical-align: middle;
+		}
 	}
 	&:hover aside {
 		transform: translateX(0);
@@ -120,6 +128,19 @@ $purple: #900C3F;
  		margin: 0;
  		width: 100%;
  	}
+ 	@media screen and (max-width: 480px) {
+ 		height: 50.5vh;
+		aside p {
+			font-size: 5.4vw;
+		}
+		.raised50px & video {
+	  	margin-top: 0;
+	  }
+		.raised250px & video {
+	  	margin-top: 0;
+	  }	
+	}
 }
+//calc(100vw/16px)
 	
 </style>

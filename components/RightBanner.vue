@@ -17,5 +17,13 @@
     &:hover {
 			transform: translate(-65%, -10%);
 		}
+
+		@media screen and (max-width: 480px) {
+			height: 90vw;
+			transform: translate(-75%, -10%);
+			&:hover {
+				transform: translate(-115%, -10%);
+			}
+		}
 	}	
 </style>
