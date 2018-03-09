@@ -54,11 +54,13 @@ $purple: #900C3F;
     font-size: 3.2rem;
     left: 0;
     margin: 0;
-    opacity: .4;
+    mix-blend-mode: hard-light;
+    opacity: .7;
     padding: calc(33.3vh - 50px) 0;
     position: absolute;
     vertical-align: middle;
     text-align: center;
+    text-transform: capitalize;
     width: 100%;
     z-index: 10;
  	}
@@ -72,20 +74,17 @@ $purple: #900C3F;
   .raised250px & video {
   	margin-top: -250px;
   }
+  .knockout &:before {
+  	mix-blend-mode: multiply;
+  }
   .no-height & {
   	height: 100%;
   }
-  .light-grey &:before {
-  	background: #aaa;
-  }
-  .gold &:before {
-  	background: #ffc678;
+  .blue &:before {
+  	background: blue;
   }
   .purple &:before {
   	background: purple;
-  }
-  .pink &:before {
-  	background: pink;
   }
   .green &:before {
   	background: green;
@@ -108,10 +107,10 @@ $purple: #900C3F;
     position: absolute;
     top: 0;
     right: 0;
-    //padding: 2rem;
     font-size: 2rem;
     font-weight: 600;
     line-height: 5rem;
+    pointer-events: none;
     text-align: center;
     z-index: 100;
 		// media query for mobile
@@ -138,6 +137,14 @@ $purple: #900C3F;
 	  }
 		.raised250px & video {
 	  	margin-top: 0;
+	  }
+	  video {
+	  	height: 100%;
+	  	width: auto;
+	  	.re-centered & {
+	  		position: relative;
+    		right: 50%;
+	  	}
 	  }	
 	}
 }

@@ -4,7 +4,7 @@
   id="video-container">
     <video 
       autoplay loop muted :style="swivelPosition"
-      poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/edibars-logo-cropped.png"
+      poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/logo.svg"
       playsinline
       src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/bike-messenging.mp4"
       >               
