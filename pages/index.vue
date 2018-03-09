@@ -20,6 +20,10 @@
       <giphy-card gifID="6i9oVZXPZTbAA" gifTitle="Soy-Free" class="brown re-centered" caption="yuck ...no soy here 😷" />
       <giphy-card gifID="l4JyYCo1POYWC9HmE" gifTitle="Low Sugar &amp; Low Carb" class="blue" caption="...only 4 grams of sugar &amp; 10 grams of carbs per serving! 👌" />
       <giphy-card gifID="v5yOkOh1nGQVy" gifTitle="" class="no-height" />
+      <div>
+        <comparer product="krak" :nutrients="[32, 4, 10, 0, true, true, true]"/>     
+        <comparer product="Quest Protein Bars" :nutrients="[20, 4, 12, 7, false, false, true]"/>
+      </div>
     </section>
   </main> 
 </template>
@@ -29,12 +33,14 @@ import AppLogo from '~/components/AppLogo.vue'
 import LandingPageVideo from '~/components/LandingPageVideo.vue'
 import RightBanner from '~/components/RightBanner.vue'
 import GiphyCard from '~/components/GiphyCard.vue'
+import Comparer from '~/components/Comparer.vue'
 
 export default {
   components: {
     LandingPageVideo,
     RightBanner,
-    GiphyCard
+    GiphyCard,
+    Comparer
   }
 }
 </script>
