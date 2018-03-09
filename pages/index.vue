@@ -16,8 +16,8 @@
       -->
       <giphy-card gifID="3o7TKElEmyu9uqX7zy" gifTitle="Gluten-Free" class="green re-centered" caption="Sometimes it's hard getting protein on a gluten-free diet... 
       We fix that! 😄 🙌"/>
-      <giphy-card gifID="Z2QAiHPRQcQUw" gifTitle="Paleo" class="black knockout" caption="Trust our whole, all-natural ingredients. We handmake the pretzels &amp; chocolate ourselves...seriously 👐" />
-      <giphy-card gifID="6i9oVZXPZTbAA" gifTitle="Soy-Free" class="brown re-centered" caption="yuck ...no soy either 😷" />
+      <giphy-card gifID="Z2QAiHPRQcQUw" gifTitle="Paleo" class="black knockout-soft" caption="...100% whole, all-natural ingredients. We handmake the chocolate &amp; pretzels ourselves...seriously!" />
+      <giphy-card gifID="6i9oVZXPZTbAA" gifTitle="Soy-Free" class="brown re-centered" caption="yuck ...no soy here 😷" />
       <giphy-card gifID="l4JyYCo1POYWC9HmE" gifTitle="Low Sugar &amp; Low Carb" class="blue" caption="...only 4 grams of sugar &amp; 10 grams of carbs per serving! 👌" />
       <giphy-card gifID="v5yOkOh1nGQVy" gifTitle="" class="no-height" />
     </section>
@@ -48,7 +48,8 @@ export default {
   top: 0;
 }
 .below-fold {
-  background: #fff;
+  //background: #fff;
+  //background-image: url("https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/purty_wood_%402X.png");
   position: absolute;
   margin-top: 10vh;
   top: 50vw;
@@ -56,10 +57,13 @@ export default {
 }
 .headline {
   color: #900C3F;
-  //color: #fff;
+  color: cyan;
+  filter: drop-shadow(.05em .05em #eee);
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 3.5rem;
-  margin-bottom: 2rem;
+  font-weight: 600;
+  margin-bottom: 5vw;
+  mix-blend-mode: difference;
   width: 100%;
   text-align: center;
 }

@@ -1,7 +1,7 @@
 <template>
 	<article>
-		<div class="gif-card" :data-title="gifTitle" >
-			<video autoplay :poster="gifID" loop>
+		<div class="gif-card" :data-title="gifTitle" :class="{ opaque: isMobileDevice }">
+			<video autoplay :poster="gifID" loop v-if="!isMobileDevice">
         <source :src="giphySrc(gifID)" 
         type="video/mp4" />
           {{ gifTitle }}
@@ -14,6 +14,11 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      isMobileDevice: null
+    }
+  },
 	name: 'GiphyCard',
 	props: {
 		caption: {
@@ -36,7 +41,11 @@ export default {
 		giphySrc(gifID) {
 			return `https://media.giphy.com/media/${gifID}/giphy.mp4`;
 		},
-	}
+	},
+  mounted() {
+    this.isMobileDevice = window.navigator.userAgent.includes("Mobi") && 
+    (window.navigator.maxTouchPoints != 0);
+  }
 }
 </script>
 <style lang="scss">
@@ -64,6 +73,9 @@ $purple: #900C3F;
     width: 100%;
     z-index: 10;
  	}
+  &.opaque:before {
+    mix-blend-mode: normal;
+  }
 	&:hover:before {
   	background-color: transparent !important;
   	opacity: 1;
@@ -76,6 +88,9 @@ $purple: #900C3F;
   }
   .knockout &:before {
   	mix-blend-mode: multiply;
+  }
+  .knockout-soft &:befoe {
+    mix-blend-mode: soft-light;
   }
   .no-height & {
   	height: 100%;
@@ -115,6 +130,21 @@ $purple: #900C3F;
     z-index: 100;
 		// media query for mobile
 		// 100% width for mobile
+    .blue & {
+      color: darken(#0000aa, 6);
+    }
+    .purple & {
+      color: $purple;
+    }
+    .green & {
+      color: darken(green, 6);
+    }
+    .brown & {
+      color: brown;
+    }
+    .black & {
+      color: black;
+    }
 		p {
 			display: table-cell;
 			vertical-align: middle;
@@ -147,7 +177,5 @@ $purple: #900C3F;
 	  	}
 	  }	
 	}
-}
-//calc(100vw/16px)
-	
+}	
 </style>

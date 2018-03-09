@@ -1,13 +1,13 @@
 <template>
   <div @mouseover="say"
-  class="layout-padding logo-container non-selectable no-pointer-events logo" 
+  class="logo" 
   id="video-container">
     <video 
       autoplay loop muted :style="swivelPosition"
       poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/logo.svg"
       playsinline
       src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/bike-messenging.mp4"
-      >               
+      >      
     </video>
 
     <!-- <div class="layout-padding" :style="position">
@@ -145,11 +145,6 @@ export default {
 </script>
 
 <style lang="scss">
-.logo-container {
-  //width: 100vw;
-  //height: auto;
-  //perspective: 800px;
-}  
 .logo {
   color: mix(red, purple, 50%);
   transform-style: preserve-3d;
@@ -157,6 +152,7 @@ export default {
 #video-container {
   flex: 3 0 90vw;
   min-width: 480px;
+  pointer-events: none;
   video {
     width: 100%;
   }
