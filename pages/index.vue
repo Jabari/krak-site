@@ -4,14 +4,13 @@
       <landing-page-video />
       <right-banner />
     </section>
-
     <section class="below-fold">
       <h1 class="headline">krak is...</h1>
       <giphy-card gifID="18UTGqcewr4Dm" gifTitle="High Protein" class="purple" caption="30 grams of muscle-building protein per serving 🏋️💪" />
       <giphy-card gifID="zyziDWLk2B6zS" gifTitle="Vegan" class="green re-centered knockout" caption="100% plant-based 🌿" />
       <giphy-card gifID="zUG19ImYp0sco" gifTitle="Delicious" class="raised50px brown" caption="20 ~ 30 delicious chocolate-covered pretzel balls in every serving 🍫🤤" />
       <giphy-card gifID="l44QzsOLXxcrigdgI" gifTitle="Nootropic" class="black" caption="...contains a blend of natural herbs to improve your focus &amp; concentration — without caffeine — for hours! ⚡" />
-      <giphy-card gifID="ItlwEVsy2qhSo" gifTitle="Anti-Inflammatory" class="raised50px purple" caption="...contains anti-inflammatory antioxidants known to relieve joint pain 💪🦴" />
+      <giphy-card gifID="ItlwEVsy2qhSo" gifTitle="Anti-Inflammatory" class="raised50px purple" caption="...contains anti-inflammatory antioxidants known to relieve joint pain 🏃🏿‍♀🏃" />
       <!-- source: https://www.livestrong.com/article/145900-benefits-of-turmeric-powder/
       -->
       <giphy-card gifID="3o7TKElEmyu9uqX7zy" gifTitle="Gluten-Free" class="green re-centered" caption="Sometimes it's hard getting protein on a gluten-free diet... 
@@ -19,11 +18,10 @@
       <giphy-card gifID="Z2QAiHPRQcQUw" gifTitle="Paleo" class="black knockout-soft" caption="...100% whole, all-natural ingredients. We handmake the chocolate &amp; pretzels ourselves...seriously!" />
       <giphy-card gifID="6i9oVZXPZTbAA" gifTitle="Soy-Free" class="brown re-centered" caption="yuck ...no soy here 😷" />
       <giphy-card gifID="l4JyYCo1POYWC9HmE" gifTitle="Low Sugar &amp; Low Carb" class="blue" caption="...only 4 grams of sugar &amp; 10 grams of carbs per serving! 👌" />
-      <giphy-card gifID="v5yOkOh1nGQVy" gifTitle="" class="no-height" />
-      <div>
-        <comparer product="krak" :nutrients="[32, 4, 10, 0, true, true, true]"/>     
-        <comparer product="Quest Protein Bars" :nutrients="[20, 4, 12, 7, false, false, true]"/>
-      </div>
+      <!-- <giphy-card gifID="v5yOkOh1nGQVy" gifTitle="" class="no-height" todo: "...no preservatives, additives, palm oil or GMOs" /> -->
+      <hr>
+      <h2 class="headline">compare with...</h2>
+      <comparer />
     </section>
   </main> 
 </template>
@@ -45,6 +43,7 @@ export default {
 }
 </script>
 <style lang="scss">
+$purple: #900C3F;
 .above-fold {
   align-items: flex-start;
   display: flex;
@@ -63,8 +62,9 @@ export default {
 }
 .headline {
   color: #900C3F;
-  color: cyan;
-  filter: drop-shadow(.05em .05em #eee);
+  color: #265EE7;
+  color: #D9A118;
+  filter: drop-shadow(.05em .05em $purple);
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
@@ -72,6 +72,11 @@ export default {
   mix-blend-mode: difference;
   width: 100%;
   text-align: center;
+}
+h2.headline {
+  color: #fff;
+  filter: drop-shadow(.05em .05em #265EE7);
+  margin-bottom: 1vw;
 }
 .container {
   text-align: center;

@@ -63,7 +63,7 @@ $purple: #900C3F;
     font-size: 3.2rem;
     left: 0;
     margin: 0;
-    mix-blend-mode: hard-light;
+    //mix-blend-mode: hard-light;
     opacity: .7;
     padding: calc(33.3vh - 50px) 0;
     position: absolute;
@@ -74,7 +74,7 @@ $purple: #900C3F;
     z-index: 10;
  	}
   &.opaque:before {
-    mix-blend-mode: normal;
+    //mix-blend-mode: normal;
   }
 	&:hover:before {
   	background-color: transparent !important;
