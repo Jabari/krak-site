@@ -6,7 +6,7 @@
       autoplay loop muted :style="swivelPosition"
       poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/logo.svg"
       playsinline
-      src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/bike-messenging.mp4"
+      src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/krak+landing+page+v2.mp4"
       >      
     </video>
 
