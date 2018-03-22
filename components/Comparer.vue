@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section id="comparer-section">
 		<no-ssr class="c comparer">
 			<table class="krak">
 				<thead>
@@ -81,6 +81,11 @@
 no-ssr {
 	display: block;
 }
+#comparer-section {
+	background: #fff;
+	display: flex;
+	min-width: 300px;
+}
 .comparer {
 	background: #fff;
 	color: #555;
@@ -100,6 +105,7 @@ no-ssr {
 		height: 3rem;
 	}
 	table {
+		border-collapse: collapse;
 		width: 90%;
 		thead {
 			height: 3rem;

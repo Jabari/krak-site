@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<img class="banner" src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/krak-package-web.png" />
+		<img class="banner" src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/krak-package-shadow-compressed.png" />
 	</section>
 </template>
 <script>
@@ -12,7 +12,7 @@
 	.banner {
 		flex: 1 0 0;
 		transform: translate(-35%, -10%);
-    height: 63vw;
+    height: 55vw;
     transition: transform 0.5s ease-out;
     &:hover {
 			transform: translate(-65%, -10%);
