@@ -5,11 +5,16 @@
       <right-banner />
     </section>
     <section class="below-fold">
+      <div id="video-caption">
+        <h2 class="headline">krak</h2>
+        <hr />
+        <h4>Ignite your day</h4>
+      </div>
       <h1 class="headline">krak is...</h1>
       <giphy-card gifID="18UTGqcewr4Dm" gifTitle="High Protein" class="purple" caption="30 grams of muscle-building protein per serving 🏋️💪" />
       <giphy-card gifID="zyziDWLk2B6zS" gifTitle="Vegan" class="green re-centered knockout" caption="100% plant-based 🌿" />
       <giphy-card gifID="zUG19ImYp0sco" gifTitle="Delicious" class="raised50px brown" caption="20 ~ 30 delicious chocolate-covered pretzel balls in every serving 🍫🤤" />
-      <giphy-card gifID="l44QzsOLXxcrigdgI" gifTitle="Nootropic" class="black" caption="...contains a blend of natural herbs to improve your focus &amp; concentration — without caffeine — for hours! ⚡" />
+      <giphy-card gifID="l44QzsOLXxcrigdgI" gifTitle="Nootropic" class="black" caption="...contains a blend of natural herbs to improve focus &amp; concentration — without caffeine — for hours! ⚡" />
       <giphy-card gifID="ItlwEVsy2qhSo" gifTitle="Anti-Inflammatory" class="raised50px purple" caption="...contains anti-inflammatory antioxidants known to relieve joint pain 🏃🏿‍♀🏃" />
       <!-- source: https://www.livestrong.com/article/145900-benefits-of-turmeric-powder/
       -->
@@ -38,7 +43,7 @@ export default {
     LandingPageVideo,
     RightBanner,
     GiphyCard,
-    Comparer
+    Comparer,
   }
 }
 </script>
@@ -56,8 +61,8 @@ $purple: #900C3F;
   //background: #fff;
   //background-image: url("https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/purty_wood_%402X.png");
   position: absolute;
-  margin-top: 10vh;
-  top: 50vw;
+  margin-top: 15vw;
+  // top: 50vw;
   width: 100%;
 }
 .headline {
@@ -98,8 +103,54 @@ h2.headline {
   word-spacing: 5px;
   padding-bottom: 15px;
 }
+#video-caption {
+  color: #fff;
+  margin: 0 auto 20vw;
+  text-align: center;
+  width: 40%;
+  text-align: center;
+  h4 {
+    animation-name: onload-h4;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+    font-family: inherit;
+    font-size: 2rem;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  hr {
+    animation-name: onload-hr;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+    margin: -10px auto 5px;
+    overflow: hidden;
+    text-align: center;
+    width: 0;
+  }
+}
 
+@keyframes onload-hr {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 100%
+  }
+}
+@keyframes onload-h4 {
+  80% {
+    visibility: hidden;   
+  }
+  100% {
+    visibility: visible;
+  }
+}
 .links {
   padding-top: 15px;
 }
+
 </style>

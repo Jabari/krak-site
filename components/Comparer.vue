@@ -8,7 +8,7 @@
 				<tbody>
 					<tr v-for="(macro, index) in macros" :key="macro">
 						<td>{{ macro, index }}</td>
-						<td>{{ products["krak"][index] }}</td>
+						<td>{{ products["krak Protein Snack"][index] }}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -20,7 +20,7 @@
 		        <option 
 		        	v-for="(product, key) in products" 
 		        	:key="key" 
-		        	v-if="key !== 'krak'"
+		        	v-if="key !== 'krak Protein Snack'"
 		        	:value="key"
 		        	>
 		        	{{ key }}
@@ -48,12 +48,12 @@
 		data() {
 			return {
 				"products": {					
-					"krak": [32, 12, 11, 4, "✓", "✓", "✓"],
-					"Quest": [21, 8, 21, 1, "❌", "✓", "✓"],
-					"Clif BUILDERs": [20, 9, 30, 21, "✓", "❌", "❌"],
-					"RXBAR": [12, 9, 22, 12, "❌", "✓", "✓"],
-					"Vega Sport": [15, 11, 27, 16, "✓", "✓", "✓"],
-					"Orgain": [10, 6, 17, 3, "✓", "✓", "✓"],
+					"krak Protein Snack": [32, 12, 11, 4, "✓", "✓", "✓"],
+					"Quest Protein Bars": [21, 8, 21, 1, "❌", "✓", "✓"],
+					"Clif BUILDERs Protein Bars": [20, 9, 30, 21, "✓", "❌", "❌"],
+					"RXBAR Protein Bars": [12, 9, 22, 12, "❌", "✓", "✓"],
+					"Vega Sport Protein Bars": [15, 11, 27, 16, "✓", "✓", "✓"],
+					"Orgain Protein Bars": [10, 6, 17, 3, "✓", "✓", "✓"],
 				},
 				"macros": [
 					'Protein',
@@ -64,7 +64,7 @@
 					'Soy Free',
 					'Gluten Free'
 				],
-				"comparedProduct": "Quest",
+				"comparedProduct": "Quest Protein Bars",
 			}
 		},
 		methods: {

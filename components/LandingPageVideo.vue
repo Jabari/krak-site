@@ -1,7 +1,7 @@
 <template>
   <div @mouseover="say"
-  class="logo" 
-  id="video-container">
+    class="logo" 
+    id="video-container">
     <video 
       autoplay loop muted :style="swivelPosition"
       poster="https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/logo.svg"
@@ -9,12 +9,6 @@
       src="https://s3-us-west-2.amazonaws.com/aws-edibars-site/vids/krak+landing+page+v2.mp4"
       >      
     </video>
-
-    <!-- <div class="layout-padding" :style="position">
-
-
-    </div> -->
-    
   </div>
 </template>
 
@@ -66,9 +60,6 @@ export default {
   methods: {
     launch (url) {
       openURL(url)
-    },
-    say () {
-      console.log("hey")
     },
     move (evt) {
       const
