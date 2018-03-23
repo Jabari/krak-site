@@ -113,6 +113,7 @@ no-ssr {
 }
 .krak {
 	color: #4d0013;
+	font-weight: 600;
 	thead {
 		font-size: 1.5rem;
 		position: relative;
