@@ -22,7 +22,7 @@
       We fix that! 😄 🙌"/>
       <giphy-card gifID="Z2QAiHPRQcQUw" gifTitle="Keto &amp; Paleo friendly" class="black knockout-soft" caption="100% natural ingredients &amp; only 11g total carbs. krak helps support your keto &amp; paleo diet goals." />
       <giphy-card gifID="6i9oVZXPZTbAA" gifTitle="Soy-Free" class="brown re-centered" caption="yuck ...no soy here 😷" />
-      <giphy-card gifID="l4JyYCo1POYWC9HmE" gifTitle="Low Sugar &amp; Low Carb" class="blue" caption="...only 4 grams of sugar &amp; 10 grams of carbs per serving! 👌" />
+      <giphy-card gifID="l4JyYCo1POYWC9HmE" gifTitle="Low Sugar &amp; Low Carb" class="blue" caption="...only 4 grams of sugar &amp; 11 grams of carbs per serving! 👌" />
       <!-- <giphy-card gifID="v5yOkOh1nGQVy" gifTitle="" class="no-height" todo: "...no preservatives, additives, palm oil or GMOs" /> -->
       <hr>
       <h2 class="headline">compare with...</h2>

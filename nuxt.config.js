@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'krak - healthy snacks for mind & body',
+    title: 'krak - Ignite your day!',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+      { hid: 'description', name: 'description', content: 'Delicious high protein snacks for healthy, active people.' },
     ],
     link: [
       { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/@ajusa/lit@1.0.0/dist/lit.css'},
@@ -17,7 +17,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#ffaa00' },
   /*
   ** Build configuration
   */

@@ -119,4 +119,8 @@ no-ssr {
 		left: 1rem;
 	}
 }
+tr:nth-of-type(n+5) td:nth-child(2) {
+	color: green;
+	font-weight: 600;
+}
 </style>
