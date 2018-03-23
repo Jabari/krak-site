@@ -116,8 +116,7 @@ no-ssr {
 	font-weight: 600;
 	thead {
 		font-size: 1.5rem;
-		position: relative;
-		left: 1rem;
+		display: block;
 	}
 }
 tr:nth-of-type(n+5) td:nth-child(2) {
