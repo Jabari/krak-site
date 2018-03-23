@@ -97,7 +97,7 @@ no-ssr {
 		border-bottom: 2px solid #eee;
 		font-size: 1.3rem;
 		font-weight: 600;
-		width: 100%;
+		width: 120%;
 		padding: .5em;
 		font-size: 1rem;
 		font-weight: 600;

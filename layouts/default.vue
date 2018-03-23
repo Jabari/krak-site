@@ -6,10 +6,9 @@
 
 <style lang="scss">
 html {
-  //background-image: url("https://s3-us-west-2.amazonaws.com/aws-edibars-site/imgs/purty_wood_%402X.png");
-  //background: #fff;
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
