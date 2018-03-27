@@ -2,8 +2,9 @@
   <main>
     <section class="above-fold">
       <landing-page-video />
-      <right-banner />
+      
     </section>
+    <right-banner />
     <section class="below-fold">
       <div id="video-caption">
         <h2 class="headline">krak</h2>

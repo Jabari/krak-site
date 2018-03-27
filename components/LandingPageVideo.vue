@@ -1,5 +1,5 @@
 <template>
-  <div @mouseover="say"
+  <div
     class="logo" 
     id="video-container">
     <video 
