@@ -5,7 +5,16 @@
 </template>
 <script>
 	export default {
-		name: 'RightImage'
+		data() {
+	    return {
+	      isMobileDevice: null
+	    }
+	  },
+		name: 'RightImage',
+		mounted() {
+	    this.isMobileDevice = window.navigator.userAgent.includes("Mobi") && 
+	    (window.navigator.maxTouchPoints != 0);
+	  }
 	}
 </script>
 <style lang="scss" scoped>
@@ -20,10 +29,7 @@
 
 		@media screen and (max-width: 480px) {
 			height: 90vw;
-			transform: translate(-75%, -10%);
-			&:hover {
-				transform: translate(-115%, -10%);
-			}
+			
 		}
 	}	
 </style>

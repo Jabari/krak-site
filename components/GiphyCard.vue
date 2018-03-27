@@ -1,5 +1,5 @@
 <template>
-	<article>
+	<article title="tap for details">
 		<div class="gif-card" :data-title="gifTitle" :class="{ opaque: isMobileDevice }">
 			<video autoplay :poster="gifID" loop v-if="!isMobileDevice">
         <source :src="giphySrc(gifID)" 
