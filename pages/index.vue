@@ -57,6 +57,7 @@ $purple: #900C3F;
   justify-content: space-between;
   position: fixed;
   top: 0;
+  width: 100%;
 }
 .below-fold {
   //background: #fff;
