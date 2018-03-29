@@ -48,7 +48,7 @@
 		data() {
 			return {
 				"products": {					
-					"krak Protein Snack": [32, 12, 11, 4, "✓", "✓", "✓"],
+					"krak Protein Snack": [32, 14, 11, 4, "✓", "✓", "✓"],
 					"Quest Protein Bars": [21, 8, 21, 1, "❌", "✓", "✓"],
 					"Clif BUILDERs Protein Bars": [20, 9, 30, 21, "✓", "❌", "❌"],
 					"RXBAR Protein Bars": [12, 9, 22, 12, "❌", "✓", "✓"],
