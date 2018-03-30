@@ -98,7 +98,7 @@ no-ssr {
 		font-size: 1.3rem;
 		font-weight: 600;
 		width: 120%;
-		padding: .5em;
+		padding: .5rem;
 		font-size: 1rem;
 		font-weight: 600;
 		height: 3rem;
@@ -106,17 +106,15 @@ no-ssr {
 	table {
 		border-collapse: collapse;
 		width: 90%;
-		thead {
-			height: 3rem;
-		}
 	}
 }
 .krak {
 	color: #4d0013;
 	font-weight: 600;
 	thead {
-		font-size: 1.5rem;
 		display: block;
+		font-size: 1.5rem;
+		padding: 0 1rem;
 	}
 }
 tr:nth-of-type(n+5) td:nth-child(2) {
